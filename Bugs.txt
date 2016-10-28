@@ -1,0 +1,28 @@
+1 vide is always black (2dx v3.7.1) , please fixed it
+2 some crash in appsee sdk ,please fixed it
+
+crash 1
+
+java.util.concurrent.TimeoutException: android.media.MediaMuxer.finalize() timed out after 10 seconds
+0-25 22:15:06.789 E/appsee ( 7560): at android.media.MediaMuxer.nativeRelease(Native Method)
+10-25 22:15:06.789 E/appsee ( 7560): at android.media.MediaMuxer.finalize(MediaMuxer.java:240)
+10-25 22:15:06.789 E/appsee ( 7560): at java.lang.Daemons$FinalizerDaemon.doFinalize(Daemons.java:187)
+10-25 22:15:06.789 E/appsee ( 7560): at java.lang.Daemons$FinalizerDaemon.run(Daemons.java:170)
+10-25 22:15:06.789 E/appsee ( 7560): at java.lang.Thread.run(Thread.java:841)
+
+crash 2 please catch this java.lang.OutOfMemoryError,don't throw 
+
+java.lang.OutOfMemoryError
+at android.graphics.Bitmap.nativeCreate(Native Method)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:836)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:813)
+at android.graphics.Bitmap.createBitmap(Bitmap.java:780)
+at com.appsee.jl.(pb:605)
+at com.appsee.ld.c(fb:563)
+at com.appsee.ld.d(fb:527)
+at com.appsee.u.d(n:958)
+at com.appsee.u.B(n:4)
+at com.appsee.u.c(n:580)
+at com.appsee.y.run(n:683)
+at java.lang.Thread.run(Thread.java:841)
+ 
